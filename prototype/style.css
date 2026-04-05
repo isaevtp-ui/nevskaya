@@ -38,8 +38,8 @@
     --text-dark-secondary: var(--gray-600);
 
     /* Typography */
-    --font-display: 'Unbounded', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: 'Inter', sans-serif;
+    --font-body: 'Russo One', 'Unbounded', sans-serif;
 
     /* Spacing */
     --section-padding: 100px;
