@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БК «Невская» — Детская баскетбольная команда</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Unbounded:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="logo_shor2.png" alt="СШОР №2" class="header__logo-img">
+                <span class="header__logo-text">Невская</span>
+            </a>
+            <nav class="header__nav">
+                <a href="#schedule" class="header__link">Расписание</a>
+                <a href="#team" class="header__link">Команда</a>
+                <a href="#news" class="header__link">Новости</a>
+                <a href="#gallery" class="header__link">Галерея</a>
+                <a href="#articles" class="header__link">Статьи</a>
+                <a href="#about" class="header__link">О нас</a>
+                <a href="#contact" class="header__link header__link--cta">Записаться</a>
+            </nav>
+            <button class="header__burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__photo">
+            <div class="hero__photo-overlay"></div>
+        </div>
+        <div class="hero__bottom">
+            <div class="container hero__content">
+                <div class="hero__badge">СШОР №2 Невского района</div>
+                <h1 class="hero__title">
+                    <span class="hero__title-line">Баскетбольный</span>
+                    <span class="hero__title-line hero__title-line--accent">клуб «Невская»</span>
+                </h1>
+                <p class="hero__subtitle">Девочки 2016 г.р. · Санкт-Петербург</p>
+                <div class="hero__actions">
+                    <a href="#contact" class="btn btn--primary">Записаться в команду</a>
+                    <a href="#schedule" class="btn btn--outline">Расписание</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEXT GAME -->
+    <section class="next-game">
+        <div class="container">
+            <div class="next-game__card">
+                <div class="next-game__label">Ближайшая игра</div>
+                <div class="next-game__teams">
+                    <div class="next-game__team">
+                        <img src="logo_shor2.png" alt="Невская" class="next-game__team-logo-img">
+                        <span class="next-game__team-name">Невская</span>
+                    </div>
+                    <div class="next-game__vs">
+                        <span class="next-game__date">12 апреля</span>
+                        <span class="next-game__time">14:00</span>
+                        <span class="next-game__vs-text">VS</span>
+                    </div>
+                    <div class="next-game__team">
+                        <div class="next-game__team-logo next-game__team-logo--away">?</div>
+                        <span class="next-game__team-name">Спартак</span>
+                    </div>
+                </div>
+                <div class="next-game__venue">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="currentColor"/></svg>
+                    СК «Невский», ул. Бабушкина, 56
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Расписание</h2>
+                <p class="section-desc">Тренировки и матчи</p>
+            </div>
+            <div class="schedule__grid">
+                <div class="schedule__item schedule__item--training">
+                    <div class="schedule__day">ПН</div>
+                    <div class="schedule__info">
+                        <span class="schedule__type">Тренировка</span>
+                        <span class="schedule__time-slot">17:00 – 18:30</span>
+                        <span class="schedule__place">СК «Невский»</span>
+                    </div>
+                </div>
+                <div class="schedule__item schedule__item--training">
+                    <div class="schedule__day">СР</div>
+                    <div class="schedule__info">
+                        <span class="schedule__type">Тренировка</span>
+                        <span class="schedule__time-slot">17:00 – 18:30</span>
+                        <span class="schedule__place">СК «Невский»</span>
+                    </div>
+                </div>
+                <div class="schedule__item schedule__item--training">
+                    <div class="schedule__day">ПТ</div>
+                    <div class="schedule__info">
+                        <span class="schedule__type">Тренировка</span>
+                        <span class="schedule__time-slot">17:00 – 18:30</span>
+                        <span class="schedule__place">СК «Невский»</span>
+                    </div>
+                </div>
+                <div class="schedule__item schedule__item--game">
+                    <div class="schedule__day">СБ</div>
+                    <div class="schedule__info">
+                        <span class="schedule__type">Игра</span>
+                        <span class="schedule__time-slot">12 апреля · 14:00</span>
+                        <span class="schedule__place">vs Спартак</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Команда</h2>
+                <p class="section-desc">Состав сезона 2025/26</p>
+            </div>
+            <div class="team__grid">
+                <div class="team__card">
+                    <div class="team__photo">
+                        <div class="team__number">#4</div>
+                    </div>
+                    <div class="team__info">
+                        <h3 class="team__name">Анна И.</h3>
+                        <span class="team__position">Разыгрывающая</span>
+                    </div>
+                </div>
+                <div class="team__card">
+                    <div class="team__photo">
+                        <div class="team__number">#7</div>
+                    </div>
+                    <div class="team__info">
+                        <h3 class="team__name">Мария К.</h3>
+                        <span class="team__position">Атакующая защитница</span>
+                    </div>
+                </div>
+                <div class="team__card">
+                    <div class="team__photo">
+                        <div class="team__number">#11</div>
+                    </div>
+                    <div class="team__info">
+                        <h3 class="team__name">София Л.</h3>
+                        <span class="team__position">Центровая</span>
+                    </div>
+                </div>
+                <div class="team__card">
+                    <div class="team__photo">
+                        <div class="team__number">#15</div>
+                    </div>
+                    <div class="team__info">
+                        <h3 class="team__name">Алиса В.</h3>
+                        <span class="team__position">Форвард</span>
+                    </div>
+                </div>
+                <div class="team__card">
+                    <div class="team__photo">
+                        <div class="team__number">#23</div>
+                    </div>
+                    <div class="team__info">
+                        <h3 class="team__name">Ева М.</h3>
+                        <span class="team__position">Форвард</span>
+                    </div>
+                </div>
+                <div class="team__card">
+                    <div class="team__photo">
+                        <div class="team__number">#8</div>
+                    </div>
+                    <div class="team__info">
+                        <h3 class="team__name">Полина Т.</h3>
+                        <span class="team__position">Защитница</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COACHES -->
+            <div class="section-header section-header--sub">
+                <h3 class="section-title section-title--sm">Тренерский штаб</h3>
+            </div>
+            <div class="coaches__grid">
+                <div class="coach__card">
+                    <div class="coach__photo"></div>
+                    <div class="coach__info">
+                        <h3 class="coach__name">Иванов И.И.</h3>
+                        <span class="coach__role">Главный тренер</span>
+                    </div>
+                </div>
+                <div class="coach__card">
+                    <div class="coach__photo"></div>
+                    <div class="coach__info">
+                        <h3 class="coach__name">Петрова А.С.</h3>
+                        <span class="coach__role">Тренер</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Новости</h2>
+                <a href="/news" class="section-link">Все новости →</a>
+            </div>
+            <div class="news__grid">
+                <article class="news__card news__card--featured">
+                    <div class="news__img"></div>
+                    <div class="news__body">
+                        <span class="news__date">28 марта 2026</span>
+                        <h3 class="news__title">Победа в турнире «Весенний мяч»!</h3>
+                        <p class="news__excerpt">Наши девочки заняли первое место в городском турнире среди команд 2016 года рождения, обыграв в финале команду «Спартак».</p>
+                    </div>
+                </article>
+                <article class="news__card">
+                    <div class="news__img"></div>
+                    <div class="news__body">
+                        <span class="news__date">20 марта 2026</span>
+                        <h3 class="news__title">Открытая тренировка для новичков</h3>
+                        <p class="news__excerpt">Приглашаем девочек 2016 г.р. на открытую тренировку. Приходите попробовать!</p>
+                    </div>
+                </article>
+                <article class="news__card">
+                    <div class="news__img"></div>
+                    <div class="news__body">
+                        <span class="news__date">15 марта 2026</span>
+                        <h3 class="news__title">Выезд на сборы в Выборг</h3>
+                        <p class="news__excerpt">С 1 по 7 апреля команда отправляется на тренировочные сборы.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY PREVIEW -->
+    <section class="gallery-preview" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Галерея</h2>
+                <a href="/gallery" class="section-link">Все альбомы →</a>
+            </div>
+            <div class="gallery__albums">
+                <a href="/gallery/tournaments" class="gallery__album">
+                    <div class="gallery__album-img"></div>
+                    <div class="gallery__album-overlay">
+                        <span class="gallery__album-count">24 фото</span>
+                        <h3 class="gallery__album-title">Турниры</h3>
+                    </div>
+                </a>
+                <a href="/gallery/camps" class="gallery__album">
+                    <div class="gallery__album-img gallery__album-img--2"></div>
+                    <div class="gallery__album-overlay">
+                        <span class="gallery__album-count">18 фото</span>
+                        <h3 class="gallery__album-title">Сборы</h3>
+                    </div>
+                </a>
+                <a href="/gallery/open-trainings" class="gallery__album">
+                    <div class="gallery__album-img gallery__album-img--3"></div>
+                    <div class="gallery__album-overlay">
+                        <span class="gallery__album-count">12 фото</span>
+                        <h3 class="gallery__album-title">Открытые тренировки</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLES -->
+    <section class="articles" id="articles">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Статьи</h2>
+                <a href="/articles" class="section-link">Все статьи →</a>
+            </div>
+            <div class="articles__grid">
+                <article class="article__card">
+                    <div class="article__img"></div>
+                    <div class="article__body">
+                        <span class="article__tag">Тренировки</span>
+                        <h3 class="article__title">5 упражнений для улучшения дриблинга</h3>
+                        <p class="article__excerpt">Простые упражнения, которые можно делать дома каждый день.</p>
+                    </div>
+                </article>
+                <article class="article__card">
+                    <div class="article__img"></div>
+                    <div class="article__body">
+                        <span class="article__tag">Экипировка</span>
+                        <h3 class="article__title">Как выбрать баскетбольные кроссовки</h3>
+                        <p class="article__excerpt">Гайд для родителей: на что обращать внимание при выборе.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__text">
+                    <h2 class="section-title">О команде</h2>
+                    <p>Баскетбольный клуб «Невская» — команда девочек 2016 года рождения при СШОР №2 Невского района Санкт-Петербурга.</p>
+                    <p>Мы тренируемся 3 раза в неделю, участвуем в городских и региональных турнирах. Наша цель — развитие каждой спортсменки и любовь к баскетболу.</p>
+                    <div class="about__highlights">
+                        <div class="about__highlight">
+                            <span class="about__highlight-icon">🏀</span>
+                            <span>Тренировки 3 раза в неделю</span>
+                        </div>
+                        <div class="about__highlight">
+                            <span class="about__highlight-icon">🏆</span>
+                            <span>Городские и региональные турниры</span>
+                        </div>
+                        <div class="about__highlight">
+                            <span class="about__highlight-icon">⛺</span>
+                            <span>Выездные сборы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__inner">
+                <div class="contact__info">
+                    <h2 class="section-title">Записаться в команду</h2>
+                    <p>Приглашаем девочек 2016 года рождения. Приходите на открытую тренировку — это бесплатно!</p>
+                    <div class="contact__details">
+                        <div class="contact__detail">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 1C6.13 1 3 4.13 3 8c0 5.25 7 11 7 11s7-5.75 7-11c0-3.87-3.13-7-7-7z" fill="currentColor"/><circle cx="10" cy="8" r="2.5" fill="var(--bg-dark)"/></svg>
+                            <span>СК «Невский», ул. Бабушкина, 56, Санкт-Петербург</span>
+                        </div>
+                        <div class="contact__detail">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.05 13.27l-3.16-.95a1 1 0 00-1.05.27l-1.4 1.72a15.15 15.15 0 01-6.75-6.75l1.72-1.4a1 1 0 00.27-1.05l-.95-3.16A1 1 0 004.73 1H2a1 1 0 00-1 1.1A17 17 0 0017.9 19a1 1 0 001.1-1v-2.73a1 1 0 00-1-1z" fill="currentColor"/></svg>
+                            <span>+7 (999) 123-45-67</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form">
+                    <input type="text" placeholder="Имя ребёнка" class="contact__input">
+                    <input type="text" placeholder="Год рождения" class="contact__input">
+                    <input type="tel" placeholder="Телефон родителя" class="contact__input">
+                    <textarea placeholder="Комментарий" class="contact__textarea"></textarea>
+                    <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <img src="logo_shor2.png" alt="СШОР №2" class="header__logo-img">
+                <span>БК «Невская»</span>
+            </div>
+            <div class="footer__links">
+                <a href="#schedule">Расписание</a>
+                <a href="#team">Команда</a>
+                <a href="#news">Новости</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#contact">Контакты</a>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Telegram">TG</a>
+                <a href="#" class="footer__social-link" aria-label="VK">VK</a>
+            </div>
+            <div class="footer__copy">© 2026 БК «Невская» · СШОР №2 Невского района</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
