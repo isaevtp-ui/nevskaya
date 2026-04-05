@@ -1,52 +1,53 @@
 /* ============================================
    БК «Невская» — Design System & Prototype
+   Dark / Street / Sport Style
    ============================================ */
 
 /* --- DESIGN TOKENS --- */
 :root {
-    /* Colors — синий/белый, команда */
-    --blue-900: #0a1628;
-    --blue-800: #0f2140;
-    --blue-700: #132d5e;
-    --blue-600: #1a3f7a;
-    --blue-500: #2563eb;
-    --blue-400: #3b82f6;
-    --blue-300: #60a5fa;
-    --blue-200: #93c5fd;
-    --blue-100: #dbeafe;
-    --blue-50: #eff6ff;
+    /* Colors — тёмная база + оранжевый акцент */
+    --black: #000000;
+    --dark-900: #0a0a0a;
+    --dark-800: #111111;
+    --dark-700: #1a1a1a;
+    --dark-600: #222222;
+    --dark-500: #2a2a2a;
 
     --white: #ffffff;
-    --gray-50: #f8fafc;
-    --gray-100: #f1f5f9;
-    --gray-200: #e2e8f0;
-    --gray-300: #cbd5e1;
-    --gray-400: #94a3b8;
-    --gray-500: #64748b;
-    --gray-600: #475569;
-    --gray-700: #334155;
+    --gray-50: #f5f5f5;
+    --gray-100: #e5e5e5;
+    --gray-200: #d4d4d4;
+    --gray-300: #a3a3a3;
+    --gray-400: #737373;
+    --gray-500: #525252;
+    --gray-600: #404040;
+    --gray-700: #262626;
+
+    /* Accent — фиолетовый */
+    --purple-500: #a855f7;
+    --purple-400: #c084fc;
+    --purple-600: #9333ea;
+    --purple-glow: rgba(168, 85, 247, 0.35);
 
     /* Semantic */
-    --bg-dark: var(--blue-900);
-    --bg-light: var(--gray-50);
-    --accent: var(--blue-500);
-    --accent-hover: var(--blue-400);
-    --accent-glow: rgba(37, 99, 235, 0.3);
+    --bg-dark: var(--dark-900);
+    --bg-section: var(--dark-800);
+    --accent: var(--purple-500);
+    --accent-hover: var(--purple-400);
+    --accent-glow: var(--purple-glow);
     --text-primary: var(--white);
     --text-secondary: var(--gray-400);
-    --text-dark: var(--blue-900);
-    --text-dark-secondary: var(--gray-600);
 
     /* Typography */
-    --font-display: 'Inter', sans-serif;
-    --font-body: 'Russo One', 'Unbounded', sans-serif;
+    --font-display: 'Russo One', sans-serif;
+    --font-body: 'Inter', sans-serif;
 
     /* Spacing */
     --section-padding: 100px;
     --container-width: 1200px;
 
     /* Misc */
-    --radius: 16px;
+    --radius: 12px;
     --radius-sm: 8px;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -104,9 +105,9 @@ img {
 
 .section-title {
     font-family: var(--font-display);
-    font-size: clamp(28px, 4vw, 42px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-size: clamp(28px, 4vw, 48px);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
 .section-title--sm {
@@ -120,9 +121,10 @@ img {
 
 .section-link {
     font-family: var(--font-display);
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     transition: color var(--transition);
 }
 
@@ -137,14 +139,13 @@ img {
     justify-content: center;
     font-family: var(--font-display);
     font-size: 14px;
-    font-weight: 600;
-    padding: 14px 32px;
-    border-radius: 50px;
+    padding: 16px 36px;
+    border-radius: 4px;
     border: 2px solid transparent;
     cursor: pointer;
     transition: all var(--transition);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 .btn--primary {
@@ -156,7 +157,7 @@ img {
 .btn--primary:hover {
     background: var(--accent-hover);
     border-color: var(--accent-hover);
-    box-shadow: 0 0 30px var(--accent-glow);
+    box-shadow: 0 0 40px var(--accent-glow);
     transform: translateY(-2px);
 }
 
@@ -189,7 +190,7 @@ img {
 }
 
 .header--scrolled {
-    background: rgba(10, 22, 40, 0.95);
+    background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(20px);
     padding: 12px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -207,23 +208,17 @@ img {
     gap: 12px;
 }
 
-.header__logo-placeholder {
-    width: 40px;
-    height: 40px;
-    background: var(--accent);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 18px;
+.header__logo-img {
+    width: 132px;
+    height: 132px;
+    object-fit: contain;
 }
 
 .header__logo-text {
     font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .header__nav {
@@ -233,11 +228,12 @@ img {
 }
 
 .header__link {
-    font-size: 14px;
-    font-weight: 500;
+    font-family: var(--font-display);
+    font-size: 12px;
     color: var(--gray-300);
     transition: color var(--transition);
-    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .header__link::after {
@@ -262,13 +258,12 @@ img {
 .header__link--cta {
     background: var(--accent);
     color: var(--white);
-    padding: 8px 20px;
-    border-radius: 50px;
+    padding: 10px 24px;
+    border-radius: 4px;
     font-family: var(--font-display);
-    font-weight: 600;
     font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 .header__link--cta::after {
@@ -277,7 +272,7 @@ img {
 
 .header__link--cta:hover {
     background: var(--accent-hover);
-    box-shadow: 0 0 20px var(--accent-glow);
+    box-shadow: 0 0 24px var(--accent-glow);
 }
 
 .header__burger {
@@ -303,52 +298,58 @@ img {
    HERO
    ============================================ */
 .hero {
-    position: relative;
-    min-height: 100vh;
     display: flex;
-    align-items: center;
-    padding: 120px 0 80px;
+    flex-direction: column;
+    padding-top: 72px;
 }
 
-.hero__bg {
-    position: absolute;
-    inset: 0;
-    background: url('hero.jpeg') center center / cover no-repeat;
+.hero__photo {
+    position: relative;
+    background: url('hero.jpeg') center center / contain no-repeat;
+    background-color: var(--dark-900);
+    aspect-ratio: 16/10;
+    width: 100%;
 }
 
-.hero__overlay {
+.hero__photo-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(10, 22, 40, 0.7);
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        var(--dark-900) 100%
+    );
+}
+
+.hero__bottom {
+    background: var(--dark-900);
+    padding: 48px 0 64px;
 }
 
 .hero__content {
-    position: relative;
-    z-index: 2;
+    text-align: center;
 }
 
 .hero__badge {
     display: inline-block;
     font-family: var(--font-display);
     font-size: 11px;
-    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--blue-300);
-    background: rgba(37, 99, 235, 0.1);
-    border: 1px solid rgba(37, 99, 235, 0.2);
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
     padding: 8px 20px;
-    border-radius: 50px;
-    margin-bottom: 32px;
+    border-radius: 2px;
+    margin-bottom: 24px;
 }
 
 .hero__title {
     font-family: var(--font-display);
     font-size: clamp(36px, 6vw, 72px);
-    font-weight: 900;
     line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    text-transform: uppercase;
 }
 
 .hero__title-line {
@@ -356,73 +357,22 @@ img {
 }
 
 .hero__title-line--accent {
-    background: linear-gradient(135deg, var(--blue-300), var(--blue-500));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--accent);
+    -webkit-text-fill-color: var(--accent);
 }
 
 .hero__subtitle {
     font-size: 18px;
-    color: var(--gray-400);
-    margin-bottom: 40px;
+    color: var(--gray-300);
+    margin-bottom: 36px;
+    letter-spacing: 0.05em;
 }
 
 .hero__actions {
     display: flex;
     gap: 16px;
-    margin-bottom: 64px;
+    justify-content: center;
     flex-wrap: wrap;
-}
-
-.hero__stats {
-    display: flex;
-    gap: 48px;
-}
-
-.hero__stat {
-    display: flex;
-    flex-direction: column;
-}
-
-.hero__stat-number {
-    font-family: var(--font-display);
-    font-size: 36px;
-    font-weight: 900;
-    color: var(--white);
-}
-
-.hero__stat-label {
-    font-size: 14px;
-    color: var(--gray-500);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.hero__scroll {
-    position: absolute;
-    bottom: 40px;
-    right: 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    color: var(--gray-500);
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-}
-
-.hero__scroll-line {
-    width: 1px;
-    height: 60px;
-    background: linear-gradient(to bottom, var(--gray-500), transparent);
-    animation: scrollPulse 2s ease-in-out infinite;
-}
-
-@keyframes scrollPulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
 }
 
 /* ============================================
@@ -436,19 +386,20 @@ img {
 }
 
 .next-game__card {
-    background: linear-gradient(135deg, var(--blue-800), var(--blue-700));
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--dark-700);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: var(--radius);
     padding: 40px;
     text-align: center;
+    border-left: 4px solid var(--accent);
 }
 
 .next-game__label {
     font-family: var(--font-display);
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--blue-300);
+    letter-spacing: 0.25em;
+    color: var(--accent);
     margin-bottom: 32px;
 }
 
@@ -466,17 +417,11 @@ img {
     gap: 12px;
 }
 
-.next-game__team-logo {
+.next-game__team-logo,
+.next-game__team-logo-img {
     width: 72px;
     height: 72px;
-    background: var(--accent);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 28px;
+    object-fit: contain;
 }
 
 .next-game__team-logo--away {
@@ -485,8 +430,8 @@ img {
 
 .next-game__team-name {
     font-family: var(--font-display);
-    font-weight: 600;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 .next-game__vs {
@@ -499,22 +444,19 @@ img {
 .next-game__date {
     font-family: var(--font-display);
     font-size: 14px;
-    font-weight: 600;
-    color: var(--blue-300);
+    color: var(--accent);
 }
 
 .next-game__time {
     font-family: var(--font-display);
-    font-size: 28px;
-    font-weight: 900;
+    font-size: 32px;
 }
 
 .next-game__vs-text {
     font-family: var(--font-display);
     font-size: 12px;
-    font-weight: 700;
     color: var(--gray-500);
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
 }
 
 .next-game__venue {
@@ -545,27 +487,26 @@ img {
     align-items: center;
     gap: 20px;
     padding: 24px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--dark-800);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: var(--radius-sm);
     transition: all var(--transition);
 }
 
 .schedule__item:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: var(--dark-700);
+    border-color: rgba(255, 255, 255, 0.08);
 }
 
 .schedule__day {
     font-family: var(--font-display);
-    font-size: 24px;
-    font-weight: 900;
-    color: var(--blue-400);
-    min-width: 48px;
+    font-size: 28px;
+    color: var(--accent);
+    min-width: 52px;
 }
 
 .schedule__item--game .schedule__day {
-    color: #f59e0b;
+    color: #facc15;
 }
 
 .schedule__info {
@@ -577,9 +518,8 @@ img {
 .schedule__type {
     font-family: var(--font-display);
     font-size: 13px;
-    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 .schedule__time-slot {
@@ -597,7 +537,7 @@ img {
    ============================================ */
 .team {
     padding: var(--section-padding) 0;
-    background: var(--blue-800);
+    background: var(--dark-800);
 }
 
 .team__grid {
@@ -607,8 +547,8 @@ img {
 }
 
 .team__card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--dark-700);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: var(--radius);
     overflow: hidden;
     transition: all var(--transition);
@@ -617,12 +557,12 @@ img {
 .team__card:hover {
     transform: translateY(-4px);
     border-color: var(--accent);
-    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 8px 40px var(--accent-glow);
 }
 
 .team__photo {
     height: 220px;
-    background: linear-gradient(135deg, var(--blue-700), var(--blue-600));
+    background: linear-gradient(135deg, var(--dark-600), var(--dark-500));
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -631,9 +571,8 @@ img {
 
 .team__number {
     font-family: var(--font-display);
-    font-size: 48px;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.08);
+    font-size: 56px;
+    color: rgba(255, 255, 255, 0.06);
     line-height: 1;
 }
 
@@ -644,8 +583,8 @@ img {
 .team__name {
     font-family: var(--font-display);
     font-size: 15px;
-    font-weight: 700;
     margin-bottom: 4px;
+    text-transform: uppercase;
 }
 
 .team__position {
@@ -665,8 +604,8 @@ img {
     align-items: center;
     gap: 20px;
     padding: 24px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--dark-700);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: var(--radius);
 }
 
@@ -674,14 +613,14 @@ img {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--blue-600), var(--blue-500));
+    background: linear-gradient(135deg, var(--dark-500), var(--accent));
     flex-shrink: 0;
 }
 
 .coach__name {
     font-family: var(--font-display);
     font-size: 15px;
-    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .coach__role {
@@ -703,15 +642,15 @@ img {
 }
 
 .news__card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--dark-800);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: var(--radius);
     overflow: hidden;
     transition: all var(--transition);
 }
 
 .news__card:hover {
-    border-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
 
@@ -721,7 +660,7 @@ img {
 
 .news__img {
     height: 200px;
-    background: linear-gradient(135deg, var(--blue-700), var(--blue-600));
+    background: linear-gradient(135deg, var(--dark-700), var(--dark-500));
 }
 
 .news__card--featured .news__img {
@@ -733,18 +672,19 @@ img {
 }
 
 .news__date {
-    font-size: 12px;
+    font-family: var(--font-display);
+    font-size: 11px;
     color: var(--gray-500);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
 }
 
 .news__title {
     font-family: var(--font-display);
     font-size: 18px;
-    font-weight: 700;
     margin: 8px 0;
     line-height: 1.3;
+    text-transform: uppercase;
 }
 
 .news__card:not(.news__card--featured) .news__title {
@@ -781,16 +721,16 @@ img {
 .gallery__album-img {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+    background: linear-gradient(135deg, var(--dark-600), var(--dark-500));
     transition: transform var(--transition);
 }
 
 .gallery__album-img--2 {
-    background: linear-gradient(135deg, var(--blue-600), var(--blue-400));
+    background: linear-gradient(135deg, var(--dark-700), var(--dark-500));
 }
 
 .gallery__album-img--3 {
-    background: linear-gradient(135deg, var(--blue-800), var(--blue-600));
+    background: linear-gradient(135deg, var(--dark-800), var(--dark-600));
 }
 
 .gallery__album:hover .gallery__album-img {
@@ -800,7 +740,7 @@ img {
 .gallery__album-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(10, 22, 40, 0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -816,7 +756,7 @@ img {
 .gallery__album-title {
     font-family: var(--font-display);
     font-size: 20px;
-    font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* ============================================
@@ -824,7 +764,7 @@ img {
    ============================================ */
 .articles {
     padding: var(--section-padding) 0;
-    background: var(--blue-800);
+    background: var(--dark-800);
 }
 
 .articles__grid {
@@ -837,21 +777,21 @@ img {
     display: flex;
     gap: 20px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--dark-700);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: var(--radius);
     transition: all var(--transition);
 }
 
 .article__card:hover {
-    border-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .article__img {
     width: 120px;
     min-height: 100px;
     border-radius: var(--radius-sm);
-    background: linear-gradient(135deg, var(--blue-700), var(--blue-600));
+    background: linear-gradient(135deg, var(--dark-600), var(--dark-500));
     flex-shrink: 0;
 }
 
@@ -864,17 +804,16 @@ img {
 .article__tag {
     font-family: var(--font-display);
     font-size: 11px;
-    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--blue-300);
+    letter-spacing: 0.15em;
+    color: var(--accent);
 }
 
 .article__title {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 700;
     line-height: 1.3;
+    text-transform: uppercase;
 }
 
 .article__excerpt {
@@ -924,7 +863,7 @@ img {
 .about__image {
     height: 400px;
     border-radius: var(--radius);
-    background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+    background: linear-gradient(135deg, var(--dark-700), var(--dark-500));
 }
 
 /* ============================================
@@ -932,7 +871,7 @@ img {
    ============================================ */
 .contact {
     padding: var(--section-padding) 0;
-    background: var(--blue-800);
+    background: var(--dark-800);
 }
 
 .contact__inner {
@@ -976,8 +915,8 @@ img {
 
 .contact__input,
 .contact__textarea {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--dark-700);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius-sm);
     padding: 14px 18px;
     font-family: var(--font-body);
@@ -1024,8 +963,8 @@ img {
     align-items: center;
     gap: 12px;
     font-family: var(--font-display);
-    font-weight: 700;
     font-size: 18px;
+    text-transform: uppercase;
 }
 
 .footer__links {
@@ -1034,8 +973,11 @@ img {
 }
 
 .footer__links a {
-    font-size: 14px;
+    font-family: var(--font-display);
+    font-size: 12px;
     color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     transition: color var(--transition);
 }
 
@@ -1054,11 +996,10 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    background: var(--dark-700);
     font-family: var(--font-display);
     font-size: 12px;
-    font-weight: 700;
     color: var(--gray-400);
     transition: all var(--transition);
 }
@@ -1089,16 +1030,13 @@ img {
         display: flex;
     }
 
-    .hero {
-        padding: 100px 0 60px;
+    .hero__photo {
+        aspect-ratio: auto;
+        min-height: 250px;
     }
 
-    .hero__stats {
-        gap: 32px;
-    }
-
-    .hero__scroll {
-        display: none;
+    .hero__bottom {
+        padding: 32px 0 48px;
     }
 
     .next-game__teams {
